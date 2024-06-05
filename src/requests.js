@@ -19,7 +19,6 @@ const createItem = async (produto) => {
   );
   return query;
 };
-//quero uma função para deletar items da lista de produto
 
 const deleteItemById = async (id) => {
   const [query] = await connection.execute(
