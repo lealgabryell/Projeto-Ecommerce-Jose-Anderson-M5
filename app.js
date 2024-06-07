@@ -14,6 +14,9 @@ connection.connect(function (err) {
 const inserir =
   "INSERT INTO cliente (cpf, nome, telefone, endereco, email, senha) VALUES (?,?,?,?,?,?);";
 
+  //TO-DO:
+  //precisamos encontrar uma forma de passar as informações do formulário para dentro das constante abaixo, que irão ser passadas como parametro na função de inserir dados no formlário.
+
 const cpf = getElementById(cpf).value;
 const nome = getElementById(nome).value;
 const telefone = getElementById(telefone).value;
@@ -39,4 +42,4 @@ const consultaMostrar = connection.query(mostrar, function (err, result) {
   }
 });
 
-// // module.exports = { inserir ,  consultaInserir , consultaMostrar };
+module.exports = { inserir ,  consultaInserir , consultaMostrar };
