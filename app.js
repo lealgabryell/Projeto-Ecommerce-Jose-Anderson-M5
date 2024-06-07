@@ -1,9 +1,10 @@
 const mysql = require("mysql2");
 
+
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "123456",
+  password: "Gabryellfodao123$",
   database: "ecommerce",
 });
 
@@ -12,21 +13,10 @@ connection.connect(function (err) {
 });
 
 const inserir =
-  "INSERT INTO cliente (cpf, nome, telefone, endereco, email, senha) VALUES (?,?,?,?,?,?);";
-
-  //TO-DO:
-  //precisamos encontrar uma forma de passar as informações do formulário para dentro das constante abaixo, que irão ser passadas como parametro na função de inserir dados no formlário.
-
-const cpf = getElementById(cpf).value;
-const nome = getElementById(nome).value;
-const telefone = getElementById(telefone).value;
-const endereco = getElementById(endereco).value;
-const email = getElementById(email).value;
-const senha = getElementById(senha).value;
+  'INSERT INTO cliente (cpf, nome, telefone, endereco, email, senha) VALUES ("08547419411","Francinaldinho","5583988665544","rua da resenha, 89","cudegrudinho@grudinho.com","cudegrude123");';
 
 const consultaInserir = connection.query(
   inserir,
-  [cpf, nome, telefone, endereco, email, senha],
   function (err, result) {
     if (err) throw err;
     console.log(result);
@@ -42,4 +32,4 @@ const consultaMostrar = connection.query(mostrar, function (err, result) {
   }
 });
 
-module.exports = { inserir ,  consultaInserir , consultaMostrar };
+// module.exports = { inserir ,  consultaInserir , consultaMostrar };
