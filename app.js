@@ -1,5 +1,5 @@
 const mysql = require("mysql2");
-const { listaClientes } = require("./index.js").default;
+import listaClientes from './index';
 
 const connection = mysql.createConnection({
   host: "localhost",
@@ -11,11 +11,10 @@ connection.connect(function (err) {
   console.log("Conectado com bando de dados do seu E-commerce!");
 });
 
-//PRECISAMO INSERIR AQUI UM CLIENTE COM AS INFORMAÇÕES QUE ESTÃO GUARDADAS NA LISTA DE CLIENTES EM INDEX.JS
 
 const inserir =
   "INSERT INTO cliente (cpf, nome, telefone, endereco, email, senha) VALUES (?, ?, ?, ?, ?, ?);";
-
+const cliente = listaClientes[listaClientes.length - 1]
 const consultaInserir = connection.query(
   inserir,
   cliente,
@@ -33,5 +32,3 @@ const consultaMostrar = connection.query(mostrar, function (err, result) {
     console.log("Consulta não realizada!");
   }
 });
-
-module.exports = { consultaInserir, consultaMostrar };

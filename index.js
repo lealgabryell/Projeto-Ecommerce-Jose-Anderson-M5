@@ -2,11 +2,13 @@
 //OS DADOS RECEBIDOS PELO FORMULARIO NAO ESTAO SENDO ADICIONADO AO ARRAY CLIENTE.
 //PRECISAMOS CONSEGUIR ENVIAR O ARRAY PARA O ARQUIVO APP.JS E LA FAZER COM QUE O MESMO SEJA ADICIONADO AO BD
 
-const listaClientes = [];
+export const listaClientes = [];
+
 function addCliente(cliente) {
   listaClientes.push(cliente);
   return cliente.nome + " adicionado a lista de clientes";
-}
+};
+
 function setCliente() {
   const nome = document.getElementById("nome").value;
   const cpf = document.getElementById("cpf").value;
@@ -29,4 +31,4 @@ function setCliente() {
   console.log(listaClientes);
 }
 
-
+document.querySelector("#cadastrar").addEventListener("click",() => setCliente);
