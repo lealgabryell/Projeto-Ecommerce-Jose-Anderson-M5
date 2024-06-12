@@ -1,21 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital@0;1&display=swap' );
+/*coloca a foto de fundo em todas as paginas que estão marcadas com o id*/
+#login ,#cadastro, #forget, #esqueceu  {
+  background-image: url(img/foto-loginpage.png);
+}
+
 body {
-    background-image: url(img/Design\ sem\ nome.png);
     max-width: 100%;
     margin-top: 15rem;
 }
-
+/* altera o tamanho das caixas da pagina de login em geral (fora a de criar conta) */
 .container {
     width: 500px;
-    height: 400px;
+    height: 300px;
     margin: 90px auto;
     padding: 50px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+/* altera o tamanho da caixa branca da pagina criar conta*/
+#container-criar{
+  width: 500px;
+  height: 500px;
+  margin: 90px auto;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-h2 {
+}
+
+/*função para partes do codigo que são repetidas ex:(titulos)*/
+span {
     font-family: Montserrat;
     text-align: center;
     margin-bottom: 20px;
@@ -28,7 +44,7 @@ label {
     display: flex;
     margin-bottom: 5px;
 }
-
+/* altera as caixas de input que estão na login page */
 input[type="text"],
 input[type="password"] {
     width: 94%;
@@ -37,7 +53,7 @@ input[type="password"] {
     font-family: Montserrat;
     margin-bottom: 20px;
 }
-
+/* altera os botôes por fora */
 .button {
   background-color: black;
   color: #fff;
@@ -49,6 +65,7 @@ input[type="password"] {
   display: flex;
 
 }
+/* altera o botão em si */
 .button button {
     font-family: Montserrat;
     width: 100%;
@@ -72,8 +89,7 @@ input[type="password"] {
     color: rgb(255, 255, 255);
 }
 .button:hover {
-  background-color: rgb(49, 43, 43);
-
+  background-color: #585953;
   cursor: pointer;
 }
 
@@ -89,10 +105,9 @@ input[type="password"] {
   transform: translateX(5px);
 }
 
-
+/* links com ref da login page */
 .links-cad {
     display: flex;
-    justify-content: space-between;
     margin-top: 1.8rem;
     padding-left: 1px;
     padding-right: 10px;
@@ -100,8 +115,16 @@ input[type="password"] {
    
 }
 .links-cad a {
- 
-color: #000;
+ color: #000;
+}
+
+#links-loginpage {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.8rem;
+  padding-left: 1px;
+  padding-right: 10px;
+  font-size: 0.9rem;
 }
 
 
